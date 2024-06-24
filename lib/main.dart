@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_crud/page/home_page.dart';
-import 'package:flutter_crud/util/color.dart';
+import 'package:flutter_crud/view/page/home_page.dart';
+import 'package:flutter_crud/view/util/color.dart';
 import 'package:velocity_x/velocity_x.dart';
 
 void main() {
@@ -15,10 +15,12 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'CRUD',
       theme: ThemeData(
-          scaffoldBackgroundColor: Vx.hexToColor('#e8eddd'),
-          floatingActionButtonTheme: FloatingActionButtonThemeData(
-            backgroundColor: greenTouch,
-          )),
+        scaffoldBackgroundColor: backgroundColor,
+        floatingActionButtonTheme: const FloatingActionButtonThemeData(
+          backgroundColor: greenTouch,
+        ),
+        dialogBackgroundColor: backgroundColor,
+      ),
       home: const HomePage(),
     );
   }

@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 
+import 'app_dialog.dart';
 import 'rounded_box.dart';
 
 class AppBottomBar extends StatelessWidget {
@@ -14,11 +15,17 @@ class AppBottomBar extends StatelessWidget {
         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
         children: [
           FloatingActionButton(
-            onPressed: () {},
+            onPressed: () {
+              AppDialog.show(
+                context: context,
+                
+            
+              );
+            },
             child: const Icon(Icons.add),
           ),
-          const Icon(Icons.search),
-          const Icon(Icons.calendar_month),
+          const Icon(Icons.home_filled),
+          const Icon(Icons.search_rounded),
           const Icon(Icons.bookmark),
         ],
       ),
